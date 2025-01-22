@@ -1,0 +1,4 @@
+(executable
+ (public_name testing)
+ (name main)
+ (libraries testing))

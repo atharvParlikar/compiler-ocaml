@@ -1,0 +1,42 @@
+# Ignore the entire _build directory
+_build/
+
+# Ignore the run executable (if it's generated)
+/run
+
+# Ignore any local opam switch files
+*.opam.swp
+*.opam.locked
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore any local configuration files
+.env
+.env.local
+
+# Ignore compiled binaries and executables
+*.exe
+*.cmx
+*.cmi
+*.cmo
+*.cmxs
+*.cmxa
+*.cma
+*.a
+*.o
+
+# Ignore generated files
+*.ml-gen
+*.mli-gen
+
+# Ignore dune-specific files
+*.install
+dune-package
