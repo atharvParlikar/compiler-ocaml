@@ -22,7 +22,7 @@ type token =
 ;;
 exception SyntaxError of string
 
-let tokanize input =
+let tokenize input =
   let len = String.length input in
   let rec aux pos tokens =
     if pos >= len then List.rev (EOF :: tokens)
@@ -127,6 +127,6 @@ let rec print_token_list tokens =
       print_token_list rest;;
 
 let syntax_string = {|let pi = 3.1415;|};;
-let tokens = tokanize syntax_string;;
+let tokens = tokenize syntax_string;;
 
 print_token_list tokens;;
