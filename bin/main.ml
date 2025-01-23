@@ -120,12 +120,13 @@ let rec print_token_list tokens =
       | LBRACE -> print_string "{"
       | RBRACE -> print_string "}"
       | STRING string -> print_string ("\"" ^ string ^ "\"")
-      (* | IDENTIFIER identifier -> print_string ("" ^ identifier ^ "\"") *)
-      | _ -> print_string "OTHER_TOKEN");  (* Handle other tokens *)
+      | SEMICOLON -> print_string("SEMICOLON")
+      | FLOAT float -> print_string("FLOAT(" ^ string_of_float float ^ ")")
+      | IDENTIFIER string -> print_string ("IDENTIFIER(" ^ string ^ ")"));
       print_string " ";
       print_token_list rest;;
 
-let syntax_string = {|"fuck you nigga" 2|};;
+let syntax_string = {|let pi = 3.1415;|};;
 let tokens = tokanize syntax_string;;
 
 print_token_list tokens;;
