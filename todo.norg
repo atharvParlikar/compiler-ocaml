@@ -1,0 +1,7 @@
+* Todo
+
+** Tokenizer error handling
+
+   - (x) Identifiers needs to also include digits and special symbols such as _
+   - ( ) Error handling at strings for eg ("asd) should throw syntax error
+   - ( ) 123. is a float, while shouldn't be and 3.14.15 is counted as float too and registerd as 3.14
