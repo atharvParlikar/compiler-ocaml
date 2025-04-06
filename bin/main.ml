@@ -11,9 +11,9 @@ type token =
   | Int of int                 (* Integer literals *)
   | Float of float             (* Float literals *)
   | String of string           (* String literals *)
-  | Equals                     (* "=" symbol *)
+  | Equals                     (* "="  symbol *)
   | Equality                   (* "==" symbol *)
-  | NotEquality
+  | NotEquality                (* "!=" symbol *)
   | Less
   | LessEqual
   | Greater
@@ -39,7 +39,7 @@ type token =
 (*  | False*)
 (*  | Nil*)
 (*;;*)
-(**)
+
 (*type operator =*)
 (*  | Equal*)
 (*  | NotEqual*)
@@ -176,7 +176,7 @@ let rec print_token_list tokens =
       print_string " ";
       print_token_list rest;;
 
-let syntax_string = {|let  = "atharv";|};;
+let syntax_string = {|2 + 2 - 4 / 6|};;
 let tokens = tokenize syntax_string;;
 
-print_token_list tokens;;
+print_token_list tokens
